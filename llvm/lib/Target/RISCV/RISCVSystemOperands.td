@@ -544,8 +544,6 @@ def : SysReg<"sf.sscratchcswl", 0x149>;
 
 // Xqciint
 let FeaturesRequired = [{ {RISCV::FeatureVendorXqciint} }], isRV32Only = 1 in {
-def : SysReg<"qc.mthreadptr", 0x7C8>;
-def : SysReg<"qc.mcause", 0x7C9>;
 
 foreach i = 0 - 7 in {
   def : SysReg<"qc.mclicip" # i, !add(0x7F0, i)>;
@@ -577,3 +575,13 @@ def SysReg_COPIFT : SysReg<"copift", 0x7C6>;
 def SysReg_DUMP : SysReg<"dump", 0x7C7>;
 def SysReg_STACKLIMIT : SysReg<"stacklimit", 0x7D1>;
 def SysReg_FMODE : SysReg<"fmode", 0x800>;
+def SysReg_PACE : SysReg<"pace", 0xBA0>;
+
+//===----------------------------------------------------------------------===//
+// Generated custom CSRs from riscv-opcodes
+//===----------------------------------------------------------------------===//
+
+def SysReg_VTLREG : SysReg<"vtlreg", 0x7C8>;
+def SysReg_VTLIDXW : SysReg<"vtlidxw", 0x7C9>;
+def SysReg_VTLBLKS : SysReg<"vtlblks", 0x7CA>;
+def SysReg_VTLRATIO : SysReg<"vtlratio", 0x7CB>;

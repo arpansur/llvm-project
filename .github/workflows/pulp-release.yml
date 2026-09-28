@@ -10,6 +10,7 @@ on:
   push:
       branches:
         - snitch
+        - prasadar/pace
 
 jobs:
 
