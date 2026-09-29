@@ -12,6 +12,9 @@ on:
         - snitch
         - pace
 
+permissions:
+  contents: write
+
 jobs:
 
   release:
@@ -98,8 +101,7 @@ jobs:
           echo "ref_name=${{ github.ref_name }}"
 
       - name: Upload Release Asset
-        if: >
-          github.event_name == 'release'
+        if: ${{ github.event_name == 'release' }}
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
