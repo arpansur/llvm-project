@@ -42,52 +42,28 @@ pace.sqrt.s fa0, fa1
 pace.rsqrt.s fa0, fa1
 
 # CHECK-INST: pace.pwpa.h fa0, fa1
-# CHECK-ENCODING: [0x53,0x85,0x05,0x62]
-# CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
-# CHECK-UNKNOWN: 62058553 <unknown>
-pace.pwpa.h fa0, fa1
-
-# CHECK-INST: pace.inv.h fa0, fa1
-# CHECK-ENCODING: [0x53,0x95,0x05,0x62]
-# CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
-# CHECK-UNKNOWN: 62059553 <unknown>
-pace.inv.h fa0, fa1
-
-# CHECK-INST: pace.sqrt.h fa0, fa1
-# CHECK-ENCODING: [0x53,0xa5,0x05,0x62]
-# CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
-# CHECK-UNKNOWN: 6205a553 <unknown>
-pace.sqrt.h fa0, fa1
-
-# CHECK-INST: pace.rsqrt.h fa0, fa1
-# CHECK-ENCODING: [0x53,0xb5,0x05,0x62]
-# CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
-# CHECK-UNKNOWN: 6205b553 <unknown>
-pace.rsqrt.h fa0, fa1
-
-# CHECK-INST: pace.pwpa.ah fa0, fa1
 # CHECK-ENCODING: [0x53,0x85,0x05,0x64]
 # CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
 # CHECK-UNKNOWN: 64058553 <unknown>
-pace.pwpa.ah fa0, fa1
+pace.pwpa.h fa0, fa1
 
-# CHECK-INST: pace.inv.ah fa0, fa1
+# CHECK-INST: pace.inv.h fa0, fa1
 # CHECK-ENCODING: [0x53,0x95,0x05,0x64]
 # CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
 # CHECK-UNKNOWN: 64059553 <unknown>
-pace.inv.ah fa0, fa1
+pace.inv.h fa0, fa1
 
-# CHECK-INST: pace.sqrt.ah fa0, fa1
+# CHECK-INST: pace.sqrt.h fa0, fa1
 # CHECK-ENCODING: [0x53,0xa5,0x05,0x64]
 # CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
 # CHECK-UNKNOWN: 6405a553 <unknown>
-pace.sqrt.ah fa0, fa1
+pace.sqrt.h fa0, fa1
 
-# CHECK-INST: pace.rsqrt.ah fa0, fa1
+# CHECK-INST: pace.rsqrt.h fa0, fa1
 # CHECK-ENCODING: [0x53,0xb5,0x05,0x64]
 # CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
 # CHECK-UNKNOWN: 6405b553 <unknown>
-pace.rsqrt.ah fa0, fa1
+pace.rsqrt.h fa0, fa1
 
 # CHECK-INST: vpace.pwpa.s fa0, fa1, fa2
 # CHECK-ENCODING: [0x33,0x85,0xc5,0xe0]
@@ -114,49 +90,25 @@ vpace.sqrt.s fa0, fa1, fa2
 vpace.rsqrt.s fa0, fa1, fa2
 
 # CHECK-INST: vpace.pwpa.h fa0, fa1, fa2
-# CHECK-ENCODING: [0x33,0x95,0xc5,0xe0]
-# CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
-# CHECK-UNKNOWN: e0c59533 <unknown>
-vpace.pwpa.h fa0, fa1, fa2
-
-# CHECK-INST: vpace.inv.h fa0, fa1, fa2
-# CHECK-ENCODING: [0x33,0x95,0xc5,0xe2]
-# CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
-# CHECK-UNKNOWN: e2c59533 <unknown>
-vpace.inv.h fa0, fa1, fa2
-
-# CHECK-INST: vpace.sqrt.h fa0, fa1, fa2
-# CHECK-ENCODING: [0x33,0x95,0xc5,0xe4]
-# CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
-# CHECK-UNKNOWN: e4c59533 <unknown>
-vpace.sqrt.h fa0, fa1, fa2
-
-# CHECK-INST: vpace.rsqrt.h fa0, fa1, fa2
-# CHECK-ENCODING: [0x33,0x95,0xc5,0xe6]
-# CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
-# CHECK-UNKNOWN: e6c59533 <unknown>
-vpace.rsqrt.h fa0, fa1, fa2
-
-# CHECK-INST: vpace.pwpa.ah fa0, fa1, fa2
 # CHECK-ENCODING: [0x33,0xa5,0xc5,0xe0]
 # CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
 # CHECK-UNKNOWN: e0c5a533 <unknown>
-vpace.pwpa.ah fa0, fa1, fa2
+vpace.pwpa.h fa0, fa1, fa2
 
-# CHECK-INST: vpace.inv.ah fa0, fa1, fa2
+# CHECK-INST: vpace.inv.h fa0, fa1, fa2
 # CHECK-ENCODING: [0x33,0xa5,0xc5,0xe2]
 # CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
 # CHECK-UNKNOWN: e2c5a533 <unknown>
-vpace.inv.ah fa0, fa1, fa2
+vpace.inv.h fa0, fa1, fa2
 
-# CHECK-INST: vpace.sqrt.ah fa0, fa1, fa2
+# CHECK-INST: vpace.sqrt.h fa0, fa1, fa2
 # CHECK-ENCODING: [0x33,0xa5,0xc5,0xe4]
 # CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
 # CHECK-UNKNOWN: e4c5a533 <unknown>
-vpace.sqrt.ah fa0, fa1, fa2
+vpace.sqrt.h fa0, fa1, fa2
 
-# CHECK-INST: vpace.rsqrt.ah fa0, fa1, fa2
+# CHECK-INST: vpace.rsqrt.h fa0, fa1, fa2
 # CHECK-ENCODING: [0x33,0xa5,0xc5,0xe6]
 # CHECK-ERROR: instruction requires the following: 'Xpace' (PACE extension){{$}}
 # CHECK-UNKNOWN: e6c5a533 <unknown>
-vpace.rsqrt.ah fa0, fa1, fa2
+vpace.rsqrt.h fa0, fa1, fa2

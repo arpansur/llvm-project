@@ -2,17 +2,6 @@
 
 let Predicates = [HasVendorXpace] in {
     let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
-    def PACE_PACE_INV_AH : RVInstI<
-                    0b001, // funct3
-                    OPC_OP_FP,
-                    (outs FPR16:$rd),
-                    (ins FPR16:$rs1),
-                    "pace.inv.ah", "$rd, $rs1">,
-                    Sched<[]> {
-        let imm12 = 0b011001000000;
-    }
-
-    let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
     def PACE_PACE_INV_H : RVInstI<
                     0b001, // funct3
                     OPC_OP_FP,
@@ -20,7 +9,7 @@ let Predicates = [HasVendorXpace] in {
                     (ins FPR16:$rs1),
                     "pace.inv.h", "$rd, $rs1">,
                     Sched<[]> {
-        let imm12 = 0b011000100000;
+        let imm12 = 0b011001000000;
     }
 
     let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
@@ -35,17 +24,6 @@ let Predicates = [HasVendorXpace] in {
     }
 
     let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
-    def PACE_PACE_PWPA_AH : RVInstI<
-                    0b000, // funct3
-                    OPC_OP_FP,
-                    (outs FPR16:$rd),
-                    (ins FPR16:$rs1),
-                    "pace.pwpa.ah", "$rd, $rs1">,
-                    Sched<[]> {
-        let imm12 = 0b011001000000;
-    }
-
-    let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
     def PACE_PACE_PWPA_H : RVInstI<
                     0b000, // funct3
                     OPC_OP_FP,
@@ -53,7 +31,7 @@ let Predicates = [HasVendorXpace] in {
                     (ins FPR16:$rs1),
                     "pace.pwpa.h", "$rd, $rs1">,
                     Sched<[]> {
-        let imm12 = 0b011000100000;
+        let imm12 = 0b011001000000;
     }
 
     let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
@@ -68,17 +46,6 @@ let Predicates = [HasVendorXpace] in {
     }
 
     let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
-    def PACE_PACE_RSQRT_AH : RVInstI<
-                    0b011, // funct3
-                    OPC_OP_FP,
-                    (outs FPR16:$rd),
-                    (ins FPR16:$rs1),
-                    "pace.rsqrt.ah", "$rd, $rs1">,
-                    Sched<[]> {
-        let imm12 = 0b011001000000;
-    }
-
-    let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
     def PACE_PACE_RSQRT_H : RVInstI<
                     0b011, // funct3
                     OPC_OP_FP,
@@ -86,7 +53,7 @@ let Predicates = [HasVendorXpace] in {
                     (ins FPR16:$rs1),
                     "pace.rsqrt.h", "$rd, $rs1">,
                     Sched<[]> {
-        let imm12 = 0b011000100000;
+        let imm12 = 0b011001000000;
     }
 
     let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
@@ -101,17 +68,6 @@ let Predicates = [HasVendorXpace] in {
     }
 
     let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
-    def PACE_PACE_SQRT_AH : RVInstI<
-                    0b010, // funct3
-                    OPC_OP_FP,
-                    (outs FPR16:$rd),
-                    (ins FPR16:$rs1),
-                    "pace.sqrt.ah", "$rd, $rs1">,
-                    Sched<[]> {
-        let imm12 = 0b011001000000;
-    }
-
-    let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
     def PACE_PACE_SQRT_H : RVInstI<
                     0b010, // funct3
                     OPC_OP_FP,
@@ -119,7 +75,7 @@ let Predicates = [HasVendorXpace] in {
                     (ins FPR16:$rs1),
                     "pace.sqrt.h", "$rd, $rs1">,
                     Sched<[]> {
-        let imm12 = 0b011000100000;
+        let imm12 = 0b011001000000;
     }
 
     let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
@@ -134,19 +90,9 @@ let Predicates = [HasVendorXpace] in {
     }
 
     let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
-    def PACE_VPACE_INV_AH : RVInstR<
-                    0b1110001, // funct7 = f2:vecfltop
-                    0b010, // funct3 = r:vfmt
-                    OPC_OP,
-                    (outs FPR16:$rd),
-                    (ins FPR16:$rs1, FPR16:$rs2),
-                    "vpace.inv.ah", "$rd, $rs1, $rs2">,
-                    Sched<[]>;
-
-    let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
     def PACE_VPACE_INV_H : RVInstR<
                     0b1110001, // funct7 = f2:vecfltop
-                    0b001, // funct3 = r:vfmt
+                    0b010, // funct3 = r:vfmt
                     OPC_OP,
                     (outs FPR16:$rd),
                     (ins FPR16:$rs1, FPR16:$rs2),
@@ -164,19 +110,9 @@ let Predicates = [HasVendorXpace] in {
                     Sched<[]>;
 
     let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
-    def PACE_VPACE_PWPA_AH : RVInstR<
-                    0b1110000, // funct7 = f2:vecfltop
-                    0b010, // funct3 = r:vfmt
-                    OPC_OP,
-                    (outs FPR16:$rd),
-                    (ins FPR16:$rs1, FPR16:$rs2),
-                    "vpace.pwpa.ah", "$rd, $rs1, $rs2">,
-                    Sched<[]>;
-
-    let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
     def PACE_VPACE_PWPA_H : RVInstR<
                     0b1110000, // funct7 = f2:vecfltop
-                    0b001, // funct3 = r:vfmt
+                    0b010, // funct3 = r:vfmt
                     OPC_OP,
                     (outs FPR16:$rd),
                     (ins FPR16:$rs1, FPR16:$rs2),
@@ -194,19 +130,9 @@ let Predicates = [HasVendorXpace] in {
                     Sched<[]>;
 
     let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
-    def PACE_VPACE_RSQRT_AH : RVInstR<
-                    0b1110011, // funct7 = f2:vecfltop
-                    0b010, // funct3 = r:vfmt
-                    OPC_OP,
-                    (outs FPR16:$rd),
-                    (ins FPR16:$rs1, FPR16:$rs2),
-                    "vpace.rsqrt.ah", "$rd, $rs1, $rs2">,
-                    Sched<[]>;
-
-    let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
     def PACE_VPACE_RSQRT_H : RVInstR<
                     0b1110011, // funct7 = f2:vecfltop
-                    0b001, // funct3 = r:vfmt
+                    0b010, // funct3 = r:vfmt
                     OPC_OP,
                     (outs FPR16:$rd),
                     (ins FPR16:$rs1, FPR16:$rs2),
@@ -224,19 +150,9 @@ let Predicates = [HasVendorXpace] in {
                     Sched<[]>;
 
     let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
-    def PACE_VPACE_SQRT_AH : RVInstR<
-                    0b1110010, // funct7 = f2:vecfltop
-                    0b010, // funct3 = r:vfmt
-                    OPC_OP,
-                    (outs FPR16:$rd),
-                    (ins FPR16:$rs1, FPR16:$rs2),
-                    "vpace.sqrt.ah", "$rd, $rs1, $rs2">,
-                    Sched<[]>;
-
-    let hasSideEffects = 0, mayLoad = 0, mayStore = 0, DecoderNamespace = "pace" in
     def PACE_VPACE_SQRT_H : RVInstR<
                     0b1110010, // funct7 = f2:vecfltop
-                    0b001, // funct3 = r:vfmt
+                    0b010, // funct3 = r:vfmt
                     OPC_OP,
                     (outs FPR16:$rd),
                     (ins FPR16:$rs1, FPR16:$rs2),
